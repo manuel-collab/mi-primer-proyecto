@@ -12,4 +12,12 @@ public class Tests
     {
         Assert.Pass();
     }
+    
+    [Test]
+    [TestCase(1, 2, 3)]
+    [TestCase(3, 4, 7)]
+    public void TestSum(int a, int b, int sum)
+    {
+        Assert.That(a + b, Is.EqualTo(sum));
+    }
 }
